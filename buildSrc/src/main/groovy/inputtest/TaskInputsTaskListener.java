@@ -25,7 +25,7 @@ public class TaskInputsTaskListener implements TaskExecutionListener {
     public void afterExecute(Task task, TaskState state) {
         System.out.println("--- TASK " + task.getPath() + " ---");
         System.out.println("BuildDir is " + task.getProject().getBuildDir());
-        handleFileCollection(task.getInputs().getFiles());
+        handleFileCollection(task.getInputs().getSourceFiles());
         System.out.println("-------------");
     }
 
